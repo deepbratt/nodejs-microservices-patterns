@@ -4,10 +4,10 @@
   "description": "NodeJS RESTful API Microservice",
   "main": "dist/index.js",
   "scripts": {
-    "start": "pm2 start index.js -i 4 --name=\"microservice\" --no-daemon",
-    "dev": "gulp serve",
+    "start": "node init && pm2 start index.js -i 4 --name=\"microservice\" --no-daemon",
+    "dev": "node init && gulp serve",
     "dist": "gulp serve:dist",
-    "build": "gulp build",
+    "build": "node init && gulp build",
     "test": "gulp test",
     "coverage": "gulp mocha:coverage",
     "coveralls": "gulp mocha:coveralls"
